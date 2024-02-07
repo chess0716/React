@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 스프레드 연산자 : 반복이 가능한 객체에서 값을 개별 요소로 분리하는 연산자
+        let arrA=[1,2,3];
+        let arrB = [...arrA,4,5,6];
+                    //1,2,3,4,5,6
+        let arrC = [arrA,4,5,6];
+        console.log(arrB);
+        console.log(arrC);
+
+        function func(a,b,c){
+            console.log(a,b,c);
+        }
+        let arr = [1,2,3];
+        func(...arr);
+        // rest 매개변수 ...: 개별요소를 배열로 묶는 연산자 (항상 마지막에 선언 해야함)
+        function func2 (param,...rest) {
+            console.log(param);
+            console.log(rest);
+        }
+        func2(1,2,3,4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
